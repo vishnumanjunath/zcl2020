@@ -1,0 +1,17 @@
+{
+  "hosting": {
+	  "site": "zebra-20",
+    "public": "",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

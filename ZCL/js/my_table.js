@@ -160,6 +160,7 @@ function resetBuffers() {
 function fetchFromDatabase(type) {
   resetBuffers();
   team_callback_count = 0;
+  rendering_callback_count = 0;
 
   console.log("Fetching "+ type +" team from database")
   firebase.database().ref('Teams/'+type).on('child_added',function(snapshot) {  // Team Callback
@@ -177,7 +178,7 @@ function fetchFromDatabase(type) {
 
       if (singleTeamList.length > 0) {
         var temp = singleTeamList[callback_count];
-        console.log("temp team="+temp);
+        //console.log("temp team="+temp);
         singleTeamList[callback_count++] = temp + ';' + snapshot.key;
       }
       else {
@@ -211,7 +212,7 @@ function fetchFromDatabase(type) {
               //     sc_s += ";" ;
               //   }
               // }
-              
+
               temp += sc_s; // FATAL ERROR might be here, uncomment and verify if exists.
 
             singleTeamList[player_index-1] = temp + child.val().name+';' ;
@@ -220,9 +221,10 @@ function fetchFromDatabase(type) {
         callback_count = 0;
         player_index = 0;
         if (type === 'boys') {
-          if (team_callback_count == renderingLimit) {
+          if (++rendering_callback_count == renderingLimit) {
             console.log("Rendering boys data now..in table:"+tableID);
             renderUIData(tableID);
+            rendering_callback_count = 0;
           } else {
             console.log('team_callback_count='+team_callback_count +' : totalTeams_boys='+totalTeams_boys);
           }

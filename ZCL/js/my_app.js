@@ -130,6 +130,9 @@ function get_team_list(game_type, team_name) {
 }
 
 function formSubmit() {
+  // Return here while debugging..
+  //showToast();
+  //return;
   // if (removeRefs()) {
   //   return;
   // }
@@ -268,8 +271,9 @@ function sendMessage(name, email, phone, game_type, team_name) {
       } else {
         console.log("Firebase write Passed");
         replaceButtonText('submit_button', "All the best, practice well and play well!");
+        showToast();
         setTimeout(function () {window.scrollTo(0,document.body.scrollHeight)}, 1500)
-        
+
         formSubmitted = true;
         unique_user_id = game_type + '/' + team_name + '/' + update_list.key
         //alert("Data write Passed: key=" + unique_user_id);

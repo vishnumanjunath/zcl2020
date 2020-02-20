@@ -239,6 +239,14 @@ function fetchFromDatabase(type) {
   });
 }
 
+function showToast(message) {
+  var x = document.getElementById("snackbar");
+  x.innerHTML = message;
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);
+}
+
+showToast("Hang on I'm fetching your information!");
 
 function waitFor(conditionFunction) {
   const poll = resolve => {

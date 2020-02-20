@@ -73,19 +73,20 @@ nav ul li:after {
 
 nav ul li:nth-child(1):after {
 	content: "Home";
-	line-height: 88px;
+	line-height: 70px;
 }
 nav ul li:nth-child(2):after {
 	content: "Teams";
-	line-height: 88px;
+	line-height: 70px;
 }
 /* nav ul li:nth-child(3):after {
 	content: "Register";
 	line-height: 85px;
 } */
 nav ul li:nth-child(3):after {
-	content: "Route";
+	content: "Show Route";
 	line-height: 70px;
+	width: 120px;
 }
 
 nav ul li:hover {
@@ -313,4 +314,20 @@ nav ul li div { position: relative; }
 	border-style: solid;
 	border-width: 0 16px 9px 16px;
 	border-color: transparent transparent white transparent;
+}
+
+@media screen and (min-width:761px) {
+
+}
+
+@media screen and (max-width:760px) {
+
+}
+
+@media screen and (max-width:480px) {
+
+}
+
+@media screen and (max-width:360px) {
+
 }

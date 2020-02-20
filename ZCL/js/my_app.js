@@ -131,6 +131,7 @@ function get_team_list(game_type, team_name) {
 
 function formSubmit() {
   // Return here while debugging..
+  //scrollToBottom();
   //showToast();
   //return;
   // if (removeRefs()) {
@@ -271,7 +272,7 @@ function sendMessage(name, email, phone, game_type, team_name) {
       } else {
         console.log("Firebase write Passed");
         replaceButtonText('submit_button', "All the best, practice well and play well!");
-        showToast();
+        showToast('Thank you for registering to ZCL 2020..');
         setTimeout(function () {window.scrollTo(0,document.body.scrollHeight)}, 1500)
 
         formSubmitted = true;
@@ -284,6 +285,19 @@ function sendMessage(name, email, phone, game_type, team_name) {
   console.log("Returning from sendMessage()");
 }
 
+function sayMessage(message) {
+  showToast(message)
+}
+function scrollToBottom() {
+  sayMessage("Showing ZCL 2020 Teams Information")
+  $("html, body").animate({ scrollTop: document.body.scrollHeight }, "slow");
+  document.getElementById('showTable').click();
+}
+
+function showMap() {
+  document.getElementById('rec163039065').scrollIntoView();
+  sayMessage('ZCL 2020 is happening here.')
+}
 /****** Other
               Utilities
                         ********/

@@ -30,6 +30,9 @@
   <link rel="stylesheet" href="project2076620/www_subdomain/tilda-blocks-2.12.css" type="text/css" media="all" />
   <link rel="stylesheet" href="css/tilda-animation-1.0.min.css" type="text/css" media="all" />
 
+  <link rel="stylesheet" href="css/custom_css.css" type="text/css" media="all" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- TODO: Add SDKs for Firebase products that you want to use
     https://firebase.google.com/docs/web/setup#available-libraries -->
 
@@ -118,6 +121,44 @@
 
 <body class="t-body" style="margin:0;">
   <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+  <nav>
+    <ul>
+      <li onclick="sayMessage('The HOME is under construction.')">
+        <div class="home-icon">
+          <div class="roof">
+            <div class="roof-edge"></div>
+          </div>
+          <div class="front"></div>
+        </div>
+      </li>
+      <li onclick="scrollToBottom()">
+        <div class="about-icon">
+          <div class="head">
+            <div class="eyes"></div>
+            <div class="beard"></div>
+          </div>
+        </div>
+      </li>
+      <!-- <li>
+        <div class="work-icon">
+          <div class="paper"></div>
+          <div class="lines"></div>
+          <div class="lines"></div>
+          <div class="lines"></div>
+        </div>
+      </li> -->
+      <li onclick="showMap()">
+        <i class="material-icons" style="font-size:48px;color:white">directions_car</i>
+
+        <!-- <div class="mail-icon">
+          <div class="mail-base">
+            <div class="mail-top"></div>
+          </div>
+        </div> -->
+      </li>
+    </ul>
+  </nav>
 
   <!--allrecords-->
   <div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="2076620" data-tilda-page-id="9476175" data-tilda-formskey="48340c95e509233a214f60d276d9a02d">
@@ -560,7 +601,7 @@
           <div class="t-row">
             <div class="t-col t-col_12 ">
               <div class="t006__line_top">
-                <a href="table/index.html" target="_self">
+                <a id="showTable" href="table/index.html" target="_self">
                 <div id="team_information_button" class="t006__uptitle t-uptitle t-uptitle_md" style="" field="title">CLICK TO VIEW OTHER TEAMS</div>
                 </a>
               </div>
@@ -579,9 +620,14 @@
 
   </div>
   <!-- <div align_left> -->
-      <a href="https://www.freecounterstat.com" title="hit counter"><img src="https://counter4.stat.ovh/private/freecounterstat.php?c=k8aa27k1mzg3wan9zgaclz24xeru7twg" border="0" title="hit counter" alt="hit counter" align="center"></a>
+      <!-- <a href="https://www.freecounterstat.com" title="hit counter"><img src="https://counter4.stat.ovh/private/freecounterstat.php?c=k8aa27k1mzg3wan9zgaclz24xeru7twg" border="0" title="hit counter" alt="hit counter" align="center"></a> -->
+      <!-- <a href="https://www.freecounterstat.com" title="web counter"><img src="https://counter2.stat.ovh/private/freecounterstat.php?c=as4hesycccwhhdnf5cyndt6y49pfxxxm" border="0" title="web counter" alt="web counter"></a> -->
+      <a href="https://www.freecounterstat.com" title="web counter"><img src="https://counter2.stat.ovh/private/freecounterstat.php?c=bkwptht5e8pd7zad4z962nc6nzzh6a93" border="0" title="web counter" alt="web counter"></a>
+
     <!-- </div>> -->
   <!--/allrecords-->
+  <div id="snackbar">Thank you for registering to ZCL 2020..</div>
+
   <!-- Tilda copyright. Don't remove this line -->
   <div class="t-tildalabel " id="tildacopy" data-tilda-sign="2076620#9476175"><a href="https://tilda.cc/?upm=2076620" class="t-tildalabel__link">
       <div class="t-tildalabel__wrapper">
@@ -611,11 +657,17 @@
       }
     })(document, window, '780f972f74d1f9726fc67230159984fb', 'script', 'https://stat.tildacdn.com/js/tildastat-0.2.min.js');
   </script>
-  <div id="snackbar">Thank you for registering to ZCL 2020..</div>
 
   <script>
   function showToast() {
     var x = document.getElementById("snackbar");
+    //x.innerHTML = message;
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+  }
+  function showToast(message) {
+    var x = document.getElementById("snackbar");
+    x.innerHTML = message;
     x.className = "show";
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
   }

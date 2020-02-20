@@ -36,17 +36,14 @@ var bannerColors = ["#5B84B1FF",
 "#FEE715FF",
 "#EA738DFF",
 "#5CC8D7FF",
-"#FCF6F5FF",
 "#B1B3B3FF",
 "#F2AA4CFF",
 "#D4B996FF",
 "#A2A2A1FF",
 "#C7D3D4FF",
-"#FCF6F5FF",
 "#6E6E6DFF",
 "#E94B3CFF",
 "#616247FF",
-"#FCF6F5FF",
 "#D64161FF",
 "#76528BFF",
 "#333D79FF",
@@ -99,8 +96,9 @@ var bannerColors = ["#5B84B1FF",
 
 function getColorCode() {
     var index = Math.floor((Math.random() * bannerColors.length));
-    document.getElementById('rec163039063').style.backgroundColor = bannerColors[index];
+    colorUsed = bannerColors[index];
+    console.log("backgroundColor used = " + colorUsed);
+    document.getElementById('rec163039063').style.backgroundColor = colorUsed;
   }
 
 getColorCode();
-

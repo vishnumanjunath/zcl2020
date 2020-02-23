@@ -13,7 +13,7 @@
 	 font-weight: 600;
 	 text-decoration: none;
 	 user-select: none;
-	 padding: 10px;
+	 padding: 20px;
 	 text-transform: uppercase;
 	 transition: all 0.1s ease-out;
 }
@@ -84,7 +84,7 @@
 }
  .button--bubble__effect-container .circle.bottom-right {
 	 bottom: 40%;
-	 right: 27%;
+	 right: 30%;
 }
  .goo {
 	 position: absolute;

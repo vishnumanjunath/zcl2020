@@ -6,7 +6,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta charset="utf-8" />
-  <meta charset = "UTF-8" />
+  <meta charset="UTF-8" />
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -78,74 +78,102 @@
     }
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-#snackbar {
-  visibility: hidden;
-  min-width: 250px;
-  margin-left: -125px;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  border-radius: 2px;
-  padding: 16px;
-  position: fixed;
-  z-index: 1;
-  left: 50%;
-  bottom: 530px;
-  font-size: 17px;
-}
+  <style>
+    #snackbar {
+      visibility: hidden;
+      min-width: 250px;
+      margin-left: -125px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 2px;
+      padding: 16px;
+      position: fixed;
+      z-index: 1;
+      left: 50%;
+      bottom: 530px;
+      font-size: 17px;
+    }
 
-#snackbar.show {
-  visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 4.5s;
-}
+    #snackbar.show {
+      visibility: visible;
+      -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+      animation: fadein 0.5s, fadeout 0.5s 4.5s;
+    }
 
-@-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 530px; opacity: 1;}
-}
+    @-webkit-keyframes fadein {
+      from {
+        bottom: 0;
+        opacity: 0;
+      }
 
-@keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 530px; opacity: 1;}
-}
+      to {
+        bottom: 530px;
+        opacity: 1;
+      }
+    }
 
-@-webkit-keyframes fadeout {
-  from {bottom: 530px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
-}
+    @keyframes fadein {
+      from {
+        bottom: 0;
+        opacity: 0;
+      }
 
-@keyframes fadeout {
-  from {bottom: 530px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
-}
-</style>
+      to {
+        bottom: 530px;
+        opacity: 1;
+      }
+    }
+
+    @-webkit-keyframes fadeout {
+      from {
+        bottom: 530px;
+        opacity: 1;
+      }
+
+      to {
+        bottom: 0;
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeout {
+      from {
+        bottom: 530px;
+        opacity: 1;
+      }
+
+      to {
+        bottom: 0;
+        opacity: 0;
+      }
+    }
+  </style>
 
 </head>
 
 <body class="t-body" style="margin:0;">
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-
-  <nav>
-    <ul>
-      <li onclick="sayMessage('The HOME is under construction.')">
-        <div class="home-icon">
-          <div class="roof">
-            <div class="roof-edge"></div>
+  <div id="nav-bar">
+    <nav>
+      <ul>
+        <li onclick="sayMessage('The HOME is under construction.')">
+          <div class="home-icon">
+            <div class="roof">
+              <div class="roof-edge"></div>
+            </div>
+            <div class="front"></div>
           </div>
-          <div class="front"></div>
-        </div>
-      </li>
-      <li onclick="scrollToBottom()">
-        <div class="about-icon">
-          <div class="head">
-            <div class="eyes"></div>
-            <div class="beard"></div>
+        </li>
+        <li onclick="scrollToBottom()">
+          <div class="about-icon">
+            <div class="head">
+              <div class="eyes"></div>
+              <div class="beard"></div>
+            </div>
           </div>
-        </div>
-      </li>
-      <!-- <li>
+        </li>
+        <!-- <li>
         <div class="work-icon">
           <div class="paper"></div>
           <div class="lines"></div>
@@ -153,17 +181,18 @@
           <div class="lines"></div>
         </div>
       </li> -->
-      <li onclick="showMap()">
-        <i class="material-icons" style="font-size:48px;color:white">directions_car</i>
+        <li onclick="showMap()">
+          <i class="material-icons" style="font-size:48px;color:white">directions_car</i>
 
-        <!-- <div class="mail-icon">
+          <!-- <div class="mail-icon">
           <div class="mail-base">
             <div class="mail-top"></div>
           </div>
         </div> -->
-      </li>
-    </ul>
-  </nav>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
   <!--allrecords-->
   <div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="2076620" data-tilda-page-id="9476175" data-tilda-formskey="48340c95e509233a214f60d276d9a02d">
@@ -194,153 +223,106 @@
               <!--vaibhav-->
               <!-- <form id="ZCLform163039064" name='form163039064' role="form"  method='POST' data-formactiontype="2" data-inputbox=".t-input-group" class="t-form js-form-proccess t-form_inputs-total_6 " data-success-callback="t678_onSuccess"> -->
 
-            <!--  <form id="ZCLform163039064" name='ZCLform163039064' data-inputbox=".t-input-group" data-success-callback="t678_onSuccess"> -->
-                <!--<input type="hidden" name="formservices[]" value="3175284e4ea0d9e6aa174366fcb9d417" class="js-formaction-services">
+              <!--  <form id="ZCLform163039064" name='ZCLform163039064' data-inputbox=".t-input-group" data-success-callback="t678_onSuccess"> -->
+              <!--<input type="hidden" name="formservices[]" value="3175284e4ea0d9e6aa174366fcb9d417" class="js-formaction-services">
                 <input type="hidden" name="tildaspec-formname" tabindex="-1" value="zcl_registration_form">
               -->
-                <div class="js-successbox t-form__successbox t-text t-text_md" style="display:none;">
-                </div>
-                <div class="t-form__inputsbox">
-                  <div class="t-input-group t-input-group_nm" data-input-lid="1494858943227">
-                    <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1494858943227" style="">
-                      Name
-                    </div>
-                    <div class="t-input-block">
-                      <form>
+              <div class="js-successbox t-form__successbox t-text t-text_md" style="display:none;">
+              </div>
+              <div class="t-form__inputsbox">
+                <div class="t-input-group t-input-group_nm" data-input-lid="1494858943227">
+                  <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1494858943227" style="">
+                    Name
+                  </div>
+                  <div class="t-input-block">
+                    <form>
                       <input required id="player_name" type="text" name="Name" class="t-input js-tilda-rule " value="" placeholder="Dale" data-tilda-req="1" data-tilda-rule="name" style="color:#000000; border:1px solid #000000; ">
-                      </form>
-                      <div class="t-input-error"></div>
-                    </div>
+                    </form>
+                    <div class="t-input-error"></div>
                   </div>
-                  <div class="t-input-group t-input-group_em" data-input-lid="1493283059688">
-                    <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1493283059688" style="">E-mail</div>
-                    <div class="t-input-block">
-                      <input required id="player_email" type="text" name="Email" class="t-input js-tilda-rule " value="" placeholder="dale@zebra.com" data-tilda-req="1" data-tilda-rule="email" style="color:#000000; border:1px solid #000000; ">
-                      <div class="t-input-error"></div>
-                    </div>
+                </div>
+                <div class="t-input-group t-input-group_em" data-input-lid="1493283059688">
+                  <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1493283059688" style="">E-mail</div>
+                  <div class="t-input-block">
+                    <input required id="player_email" type="text" name="Email" class="t-input js-tilda-rule " value="" placeholder="dale@zebra.com" data-tilda-req="1" data-tilda-rule="email" style="color:#000000; border:1px solid #000000; ">
+                    <div class="t-input-error"></div>
                   </div>
-                  <div class="t-input-group t-input-group_ph" data-input-lid="1495040492013">
-                    <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1495040492013" style="">Your Phone Number</div>
-                    <div class="t-input-block">
-                      <input required id="player_phone" type="tel" name="Phone" class="t-input js-tilda-rule " value="" placeholder="9848022338" data-tilda-req="1" data-tilda-rule="phone" pattern="[0-9]*"
-                        style="color:#000000; border:1px solid #000000; ">
-                      <div class="t-input-error"></div>
-                    </div>
+                </div>
+                <div class="t-input-group t-input-group_ph" data-input-lid="1495040492013">
+                  <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1495040492013" style="">Your Phone Number</div>
+                  <div class="t-input-block">
+                    <input required id="player_phone" type="tel" name="Phone" class="t-input js-tilda-rule " value="" placeholder="9848022338" data-tilda-req="1" data-tilda-rule="phone" pattern="[0-9]*"
+                      style="color:#000000; border:1px solid #000000; ">
+                    <div class="t-input-error"></div>
                   </div>
-                  <div class="t-input-group t-input-group_rd" data-input-lid="1581848718039">
-                    <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1581848718039" style="">I would like to play with</div>
-                    <div class="t-input-block">
-                      <div class="t-radio__wrapper">
-                        <label class="t-radio__control t-text t-text_xs" style="">
-                          <input id="player_game_type_boys" type="radio" name="tournament_type" value="Boys" class="t-radio js-tilda-rule" data-tilda-req="1">
-                          <div class="t-radio__indicator"></div>Boys
-                        </label> <label class="t-radio__control t-text t-text_xs" style="">
-                          <input id="player_game_type_girls" type="radio" name="tournament_type" value="Girls" class="t-radio js-tilda-rule" data-tilda-req="1">
-                          <div class="t-radio__indicator"></div>Girls
-                        </label> <label class="t-radio__control t-text t-text_xs" style="">
-                          <input checked id="player_game_type_watch" type="radio" name="tournament_type" value="No, I would rather watch the game #cricketForLife" class="t-radio js-tilda-rule" data-tilda-req="1">
-                          <div class="t-radio__indicator"></div>No, I would rather watch the game #cricketForLife
-                        </label> </div>
-                      <div class="t-input-error"></div>
-                    </div>
+                </div>
+                <div class="t-input-group t-input-group_rd" data-input-lid="1581848718039">
+                  <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1581848718039" style="">I would like to play with</div>
+                  <div class="t-input-block">
+                    <div class="t-radio__wrapper">
+                      <label class="t-radio__control t-text t-text_xs" style="">
+                        <input id="player_game_type_boys" type="radio" name="tournament_type" value="Boys" class="t-radio js-tilda-rule" data-tilda-req="1">
+                        <div class="t-radio__indicator"></div>Boys
+                      </label> <label class="t-radio__control t-text t-text_xs" style="">
+                        <input id="player_game_type_girls" type="radio" name="tournament_type" value="Girls" class="t-radio js-tilda-rule" data-tilda-req="1">
+                        <div class="t-radio__indicator"></div>Girls
+                      </label> <label class="t-radio__control t-text t-text_xs" style="">
+                        <input checked id="player_game_type_watch" type="radio" name="tournament_type" value="No, I would rather watch the game #cricketForLife" class="t-radio js-tilda-rule" data-tilda-req="1">
+                        <div class="t-radio__indicator"></div>No, I would rather watch the game #cricketForLife
+                      </label> </div>
+                    <div class="t-input-error"></div>
                   </div>
-                  <div class="t-input-group t-input-group_sb" data-input-lid="1581836130532">
-                    <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1581836130532" style="">Choose Your Team</div>
-                    <div class="t-input-subtitle t-descr t-descr_xxs t-opacity_70" data-redactor-toolbar="no" field="li_subtitle__1581836130532" style="">Select the last option if you dont have a team right now</div>
-                    <div class="t-input-block">
-                      <div class="t-select__wrapper ">
-                        <select id="team_name" name="team_name" class="t-select js-tilda-rule " data-tilda-req="1" style="color:#000000; border:1px solid #000000; ">
-                          <option value="Team Tagaru">Team Tagaru</option>
-                          <option value="Here For Fun">Here For Fun</option>
-                          <option value="GMSS Kings">GMSS Kings</option>
-                          <option value="The Wall">The Wall</option>
-                          <option value="Rhockers">Rhockers</option>
-                          <option value="Bangalore Super Kings">Bangalore Super Kings</option>
-                          <option value="Zebra IDC ERP Team">Zebra IDC ERP Team</option>
-                          <option value="E Sala Pakka Cup Namde">E Sala Pakka Cup Namde</option>
-                          <option value="Zebra Ratans">Zebra Ratans</option>
-                          <option value="Gladiator">Gladiator</option>
-                          <option value="Zebra Blasters">Zebra Blasters</option>
-                          <option value="Scanner Avengers">Scanner Avengers</option>
-                          <option value="Zebra Cream">Zebra Cream</option>
-                          <option value="LifeGuard">LifeGuard</option>
-                          <option value="Hit And Run">Hit And Run</option>
-                          <option value="Fusion">Fusion</option>
-                          <option value="Team17">Team17</option>
-                          <option value="Team18">Team18</option>
-                          <option value="Birds Of Prey (Women's Team)">Birds Of Prey (Women's Team)</option>
-                          <option value="Wild Cats (Women's Team)">Wild Cats (Women's Team) </option>
-                          <option value="Firehawks (Women's Team3)">Firehawks (Women's Team3) </option>
-                          <option value="Girl's Team4 ">Women's Team4 </option>
-                          <option value="Girl's Team5 ">Women's Team5 (My Team)</option>
-                          <option value="Girl's Team6 ">Women's Team6 (My Friend's Team)</option>
-                        </select> </div>
-                      <div class="t-input-error"></div>
-                    </div>
+                </div>
+                <div class="t-input-group t-input-group_sb" data-input-lid="1581836130532">
+                  <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1581836130532" style="">Choose Your Team</div>
+                  <div class="t-input-subtitle t-descr t-descr_xxs t-opacity_70" data-redactor-toolbar="no" field="li_subtitle__1581836130532" style="">Select the last option if you dont have a team right now</div>
+                  <div class="t-input-block">
+                    <div class="t-select__wrapper ">
+                      <select id="team_name" name="team_name" class="t-select js-tilda-rule " data-tilda-req="1" style="color:#000000; border:1px solid #000000; ">
+                        <option value="Team Tagaru">Team Tagaru</option>
+                        <option value="Here For Fun">Here For Fun</option>
+                        <option value="GMSS Kings">GMSS Kings</option>
+                        <option value="The Wall">The Wall</option>
+                        <option value="Rhockers">Rhockers</option>
+                        <option value="Bangalore Super Kings">Bangalore Super Kings</option>
+                        <option value="Zebra IDC ERP Team">Zebra IDC ERP Team</option>
+                        <option value="E Sala Pakka Cup Namde">E Sala Pakka Cup Namde</option>
+                        <option value="Zebra Ratans">Zebra Ratans</option>
+                        <option value="Gladiator">Gladiator</option>
+                        <option value="Zebra Blasters">Zebra Blasters</option>
+                        <option value="Scanner Avengers">Scanner Avengers</option>
+                        <option value="Zebra Cream">Zebra Cream</option>
+                        <option value="LifeGuard">LifeGuard</option>
+                        <option value="Hit And Run">Hit And Run</option>
+                        <option value="Fusion">Fusion</option>
+                        <option value="Team17">Team17</option>
+                        <option value="Team18">Team18</option>
+                        <option value="Birds Of Prey (Women's Team)">Birds Of Prey (Women's Team)</option>
+                        <option value="Wild Cats (Women's Team)">Wild Cats (Women's Team) </option>
+                        <option value="Firehawks (Women's Team3)">Firehawks (Women's Team3) </option>
+                        <option value="Girl's Team4 ">Women's Team4 </option>
+                        <option value="Girl's Team5 ">Women's Team5 (My Team)</option>
+                        <option value="Girl's Team6 ">Women's Team6 (My Friend's Team)</option>
+                      </select> </div>
+                    <div class="t-input-error"></div>
                   </div>
-                  <div class="t-input-group t-input-group_cb" data-input-lid="1500385262521">
-                    <div class="t-input-block">
-                      <label class="t-checkbox__control t-text t-text_xs" style="">
-                          <input id="checkbox" type="checkbox" name="Checkbox" value="yes" class="t-checkbox js-tilda-rule" data-tildaid="checkbox" -req="1" required>
-                        <div class="t-checkbox__indicator"></div>I will agree to all the rules of ZCL 2020.
-                      </label>
-                      <div class="t-input-error"></div>
-                    </div>
+                </div>
+                <div class="t-input-group t-input-group_cb" data-input-lid="1500385262521">
+                  <div class="t-input-block">
+                    <label class="t-checkbox__control t-text t-text_xs" style="">
+                      <input id="checkbox" type="checkbox" name="Checkbox" value="yes" class="t-checkbox js-tilda-rule" data-tildaid="checkbox" -req="1" required>
+                      <div class="t-checkbox__indicator"></div>I will agree to all the rules of ZCL 2020.
+                    </label>
+                    <div class="t-input-error"></div>
                   </div>
-                  <!--[if IE 8]><style>.t-checkbox__control .t-checkbox, .t-radio__control .t-radio { left: 0px; z-index: 1; opacity: 1;
+                </div>
+                <!--[if IE 8]><style>.t-checkbox__control .t-checkbox, .t-radio__control .t-radio { left: 0px; z-index: 1; opacity: 1;
 }
 .t-checkbox__indicator, .t-radio__indicator { display: none;
 }
 .t-img-select__control .t-img-select { position: static;
 }</style><![endif]-->
-                  <div class="t-form__errorbox-middle">
-                    <div class="js-errorbox-all t-form__errorbox-wrapper" style="display:none;">
-                      <div class="t-form__errorbox-text t-text t-text_md">
-                        <p class="t-form__errorbox-item js-rule-error js-rule-error-all"></p>
-                        <p class="t-form__errorbox-item js-rule-error js-rule-error-req"></p>
-                        <p class="t-form__errorbox-item js-rule-error js-rule-error-email"></p>
-                        <p class="t-form__errorbox-item js-rule-error js-rule-error-name"></p>
-                        <p class="t-form__errorbox-item js-rule-error js-rule-error-phone"></p>
-                        <p class="t-form__errorbox-item js-rule-error js-rule-error-minlength"></p>
-                        <p class="t-form__errorbox-item js-rule-error js-rule-error-string"></p>
-                      </div>
-                    </div>
-                  </div>
- <!--class="t-form__submit; -->
-                    <!-- <button id='submit_button' onclick="formSubmit()"type="submit"  class="t-submit" style="color:#ffffff;background-color:#30ad5a;border-radius:30px; -moz-border-radius:30px; -webkit-border-radius:30px;"
-                      data-btneffects-first="btneffects-ripple">
-                      Sign up for ZCL 2020
-                    </button> -->
-                      <div class="c_button"  onclick="formSubmit() "type="submit">
-                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
-                            <defs>
-                              <filter id="goo">
-                                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-                                <feComposite in="SourceGraphic" in2="goo"/>
-                              </filter>
-                            </defs>
-                          </svg>
-
-                          <span class="button--bubble__container" style="margin-top: 1rem;">
-                            <a href="#campaign" class="button button--bubble" id='submit_button'>
-                              Sign up for ZCL 2020
-                            </a>
-                            <span class="button--bubble__effect-container">
-                              <span class="circle top-left"></span>
-                              <span class="circle top-left"></span>
-                              <span class="circle top-left"></span>
-
-                              <span class="button effect-button"></span>
-
-                              <span class="circle bottom-right"></span>
-                              <span class="circle bottom-right"></span>
-                              <span class="circle bottom-right"></span>
-                            </span>
-                          </span>
-                    </div>
-                </div>
-                <div class="t-form__errorbox-bottom">
+                <div class="t-form__errorbox-middle">
                   <div class="js-errorbox-all t-form__errorbox-wrapper" style="display:none;">
                     <div class="t-form__errorbox-text t-text t-text_md">
                       <p class="t-form__errorbox-item js-rule-error js-rule-error-all"></p>
@@ -353,6 +335,53 @@
                     </div>
                   </div>
                 </div>
+                <!--class="t-form__submit; -->
+                <div id="plain-button">
+                    <button id='submit_button' onclick="formSubmit()"type="submit"  class="t-submit" style="color:#ffffff;background-color:#30ad5a;border-radius:30px; -moz-border-radius:30px; -webkit-border-radius:30px;"
+                      data-btneffects-first="btneffects-ripple">
+                      Sign up for ZCL 2020
+                    </button>
+                  </div>
+                <div id='magic-button' class="c_button" onclick="formSubmit() " type="submit">
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+                    <defs>
+                      <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                        <feComposite in="SourceGraphic" in2="goo" />
+                      </filter>
+                    </defs>
+                  </svg>
+
+                  <span class="button--bubble__container" style="margin-top: 1rem;">
+                    <a href="#campaign" class="button button--bubble" id='submit_button'>
+                      Sign up for ZCL 2020
+                    </a>
+                    <span class="button--bubble__effect-container">
+                      <span class="circle top-left"></span>
+                      <span class="circle top-left"></span>
+                      <span class="circle top-left"></span>
+                      <span class="button effect-button"></span>
+                      <span class="circle bottom-right"></span>
+                      <span class="circle bottom-right"></span>
+                      <span class="circle bottom-right"></span>
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <div class="t-form__errorbox-bottom">
+                <div class="js-errorbox-all t-form__errorbox-wrapper" style="display:none;">
+                  <div class="t-form__errorbox-text t-text t-text_md">
+                    <p class="t-form__errorbox-item js-rule-error js-rule-error-all"></p>
+                    <p class="t-form__errorbox-item js-rule-error js-rule-error-req"></p>
+                    <p class="t-form__errorbox-item js-rule-error js-rule-error-email"></p>
+                    <p class="t-form__errorbox-item js-rule-error js-rule-error-name"></p>
+                    <p class="t-form__errorbox-item js-rule-error js-rule-error-phone"></p>
+                    <p class="t-form__errorbox-item js-rule-error js-rule-error-minlength"></p>
+                    <p class="t-form__errorbox-item js-rule-error js-rule-error-string"></p>
+                  </div>
+                </div>
+              </div>
               <!-- </form> -->
 
               <style>
@@ -523,14 +552,49 @@
               <div class="t-text t-descr_sm" style="" field="text">Ajosh A 90082 54545<br />Vaibhav S 78926 72051<br />Satheesh R 97884 15365<br />Moin G 87925 53271<br />Ananya P 99018 06407<br /></div>
               <div class="t-sociallinks">
                 <div class="t-sociallinks__wrapper">
-                  <a target="_blank" href="https://maps.google.com/maps?ll=12.90434,77.716082&amp;z=16&amp;t=m&amp;hl=en-GB&amp;gl=US&amp;mapclient=apiv3&amp;cid=18364521476351634284"
-                  <div>
+                  <a target="_blank" href="https://maps.google.com/maps?ll=12.90434,77.716082&amp;z=16&amp;t=m&amp;hl=en-GB&amp;gl=US&amp;mapclient=apiv3&amp;cid=18364521476351634284" <div>
                     <img src="img/maps-icon.svg" alt="Google Maps" height="42" width="42">
-                  </div> </a>
-<!-- start -->
-                <div jstcache="33" class="poi-info-window gm-style"> <div jstcache="2" style=""> <div jstcache="3" class="title full-width" jsan="7.title,7.full-width"><h2>SPT Sports Academy</h2></div> <div class="address"> <div jstcache="4" class="address-line full-width" style="" jsan="7.address-line,7.full-width" jsinstance="0">Sarjapur Main Rd</div><div jstcache="4" class="address-line full-width" style="" jsan="7.address-line,7.full-width" jsinstance="1">Mullur, Karnataka 560035</div><div jstcache="4" class="address-line full-width" style="" jsan="7.address-line,7.full-width" jsinstance="*2">India</div> </div> </div> <div jstcache="5" class="transit-container" style="display: none;"> <div jstcache="10" class="transit-title" style="display:none"> <span jstcache="11"></span> </div> <div jstcache="12" class="transit-title"> <span jstcache="13">Thippasandra</span> <div jstcache="14" class="transit-wheelchair-icon" style="display:none"></div> </div> <div jstcache="15" jsinstance="*0" class="transit-line-group" jsan="7.transit-line-group"> <div class="transit-line-group-vehicle-icons"> <img height="15" width="15" jstcache="16" src="https://maps.gstatic.com/mapfiles/transit/iw2/b/bus2.png" jsinstance="*0"> </div> <div jstcache="17" class="transit-line-group-content"> <div jstcache="18" jsinstance="*0" class="transit-div-line-name"> <div jstcache="24" class="gm-transit-medium" jsan="7.gm-transit-medium"> <span jstcache="25" role="listitem" jsinstance="*0"><img height="15" width="15" jstcache="27" class="renderable-component-icon" style="display:none"><span jstcache="28"><div jstcache="29" class="renderable-component-color-box" style="display:none"></div><span jstcache="30" class="renderable-component-text-box renderable-component-bold renderable-component-text-box-white" style="background-color:#ffffff;" jsan="7.renderable-component-text-box,7.renderable-component-bold,7.renderable-component-text-box-white,5.background-color,5.color"><span jstcache="31" class="renderable-component-text-box-content" jsan="7.renderable-component-text-box-content">323-G</span></span><span jstcache="32" class="renderable-component-text renderable-component-bold" style="display:none" jsan="7.renderable-component-text,7.renderable-component-bold"></span></span></span> </div> </div> <div class="transit-clear-lines"></div> <div jstcache="19" class="transit-nlines-more-msg" style="display:none">and <span jstcache="20"></span>&nbsp;more.</div> </div> </div> </div> <div class="view-link"> <a target="_blank" jstcache="6" href="https://maps.google.com/maps?ll=12.90434,77.716082&amp;z=16&amp;t=m&amp;hl=en-GB&amp;gl=US&amp;mapclient=apiv3&amp;cid=18364521476351634284"> <span><h4>View on Google Maps</h4></span> </a> </div> </div>
-<!-- end -->
-                  <!-- <div class="t-sociallinks__item"> <a href="https://google.com" target="_blank"> <svg class="t-sociallinks__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                </div> </a>
+                <!-- start -->
+                <div jstcache="33" class="poi-info-window gm-style">
+                  <div jstcache="2" style="">
+                    <div jstcache="3" class="title full-width" jsan="7.title,7.full-width">
+                      <h2>SPT Sports Academy</h2>
+                    </div>
+                    <div class="address">
+                      <div jstcache="4" class="address-line full-width" style="" jsan="7.address-line,7.full-width" jsinstance="0">Sarjapur Main Rd</div>
+                      <div jstcache="4" class="address-line full-width" style="" jsan="7.address-line,7.full-width" jsinstance="1">Mullur, Karnataka 560035</div>
+                      <div jstcache="4" class="address-line full-width" style="" jsan="7.address-line,7.full-width" jsinstance="*2">India</div>
+                    </div>
+                  </div>
+                  <div jstcache="5" class="transit-container" style="display: none;">
+                    <div jstcache="10" class="transit-title" style="display:none"> <span jstcache="11"></span> </div>
+                    <div jstcache="12" class="transit-title"> <span jstcache="13">Thippasandra</span>
+                      <div jstcache="14" class="transit-wheelchair-icon" style="display:none"></div>
+                    </div>
+                    <div jstcache="15" jsinstance="*0" class="transit-line-group" jsan="7.transit-line-group">
+                      <div class="transit-line-group-vehicle-icons"> <img height="15" width="15" jstcache="16" src="https://maps.gstatic.com/mapfiles/transit/iw2/b/bus2.png" jsinstance="*0"> </div>
+                      <div jstcache="17" class="transit-line-group-content">
+                        <div jstcache="18" jsinstance="*0" class="transit-div-line-name">
+                          <div jstcache="24" class="gm-transit-medium" jsan="7.gm-transit-medium"> <span jstcache="25" role="listitem" jsinstance="*0"><img height="15" width="15" jstcache="27" class="renderable-component-icon"
+                                style="display:none"><span jstcache="28">
+                                <div jstcache="29" class="renderable-component-color-box" style="display:none"></div><span jstcache="30" class="renderable-component-text-box renderable-component-bold renderable-component-text-box-white"
+                                  style="background-color:#ffffff;" jsan="7.renderable-component-text-box,7.renderable-component-bold,7.renderable-component-text-box-white,5.background-color,5.color"><span jstcache="31"
+                                    class="renderable-component-text-box-content" jsan="7.renderable-component-text-box-content">323-G</span></span><span jstcache="32" class="renderable-component-text renderable-component-bold" style="display:none"
+                                  jsan="7.renderable-component-text,7.renderable-component-bold"></span>
+                              </span></span> </div>
+                        </div>
+                        <div class="transit-clear-lines"></div>
+                        <div jstcache="19" class="transit-nlines-more-msg" style="display:none">and <span jstcache="20"></span>&nbsp;more.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="view-link"> <a target="_blank" jstcache="6" href="https://maps.google.com/maps?ll=12.90434,77.716082&amp;z=16&amp;t=m&amp;hl=en-GB&amp;gl=US&amp;mapclient=apiv3&amp;cid=18364521476351634284"> <span>
+                        <h4>View on Google Maps</h4>
+                      </span> </a> </div>
+                </div>
+                <!-- end -->
+                <!-- <div class="t-sociallinks__item"> <a href="https://google.com" target="_blank"> <svg class="t-sociallinks__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         width="25px" height="25px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
                         <desc>Facebook</desc>
                         <path d="M21.1 7.8C22.5 6.5 24.5 6 26.4 6h6v6.3h-3.9c-.8-.1-1.6.6-1.8 1.4v4.2h5.7c-.1 2-.4 4.1-.7 6.1h-5v18h-7.4V24h-3.6v-6h3.6v-5.9c.1-1.7.7-3.3 1.8-4.3z" />
@@ -548,115 +612,115 @@
                           d="M16.396,3.312H8.604c-2.921,0-5.292,2.371-5.292,5.273v7.846c0,2.886,2.371,5.256,5.292,5.256h7.791c2.922,0,5.292-2.37,5.292-5.274V8.586C21.688,5.683,19.317,3.312,16.396,3.312L16.396,3.312z M7.722,12.5c0-2.64,2.142-4.778,4.778-4.778c2.636,0,4.777,2.138,4.777,4.778s-2.142,4.777-4.777,4.777C9.864,17.277,7.722,15.14,7.722,12.5zM17.756,8.182c-0.615,0-1.104-0.487-1.104-1.102s0.488-1.103,1.104-1.103c0.614,0,1.102,0.488,1.102,1.103S18.37,8.182,17.756,8.182L17.756,8.182z" />
                         <path d="M12.5,9.376c-1.731,0-3.124,1.398-3.124,3.124c0,1.725,1.393,3.124,3.124,3.124c1.732,0,3.124-1.399,3.124-3.124C15.624,10.775,14.211,9.376,12.5,9.376L12.5,9.376z" />
                       </svg> </a> </div> -->
-                </div>
               </div>
             </div>
           </div>
-          <div class="t-map-lazyload t554_map" style="width:100%; height:600px;" data-maplazy-load="false">
-            <div class="t-map" id="separateMap163039065" data-map-language="" data-map-x="-74.005941" data-map-y="40.7127837" data-map-zoom="14" data-map-title="Our Contacts" style="width:100%; height:600px;"
-              data-map-style='[{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#d3d3d3"}]},{"featureType":"transit","stylers":[{"color":"#808080"},{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#b3b3b3"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"weight":1.8}]},{"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"color":"#d7d7d7"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ebebeb"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"color":"#a7a7a7"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#efefef"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#696969"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"color":"#737373"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#d6d6d6"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#dadada"}]}]'>
-            </div>
-            <script type="text/javascript">
-              var arMapMarkers163039065 = [{
-                title: "Bangalore",
-                descr: "",
-                lat: "12.9041905",
-                lng: "77.7192649",
-              }, ];
-              $(document).ready(function() {
-                t_map_lazyload_add_map();
-                $(window).bind('scroll', t_throttle(t_map_lazyload_add_map, 300));
+        </div>
+        <div class="t-map-lazyload t554_map" style="width:100%; height:600px;" data-maplazy-load="false">
+          <div class="t-map" id="separateMap163039065" data-map-language="" data-map-x="-74.005941" data-map-y="40.7127837" data-map-zoom="14" data-map-title="Our Contacts" style="width:100%; height:600px;"
+            data-map-style='[{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#d3d3d3"}]},{"featureType":"transit","stylers":[{"color":"#808080"},{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#b3b3b3"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"weight":1.8}]},{"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"color":"#d7d7d7"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ebebeb"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"color":"#a7a7a7"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#efefef"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#696969"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"color":"#737373"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#d6d6d6"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#dadada"}]}]'>
+          </div>
+          <script type="text/javascript">
+            var arMapMarkers163039065 = [{
+              title: "Bangalore",
+              descr: "",
+              lat: "12.9041905",
+              lng: "77.7192649",
+            }, ];
+            $(document).ready(function() {
+              t_map_lazyload_add_map();
+              $(window).bind('scroll', t_throttle(t_map_lazyload_add_map, 300));
 
-                function t_map_lazyload_add_map() {
-                  var windowHeight = $(window).height();
-                  var scrollDiffHeigth = 700;
-                  var rec = $('#rec' + 163039065);
-                  var map = rec.find('.t-map-lazyload');
-                  if (map.length != 0) {
-                    var blockTop = map.offset().top;
-                    if ($(window).scrollTop() > blockTop - windowHeight - scrollDiffHeigth) {
-                      if (map.attr('data-maplazy-load') == 'false') {
-                        map.attr('data-maplazy-load', 'true');
-                        t_appendGoogleMap("163039065", "");
-                      }
+              function t_map_lazyload_add_map() {
+                var windowHeight = $(window).height();
+                var scrollDiffHeigth = 700;
+                var rec = $('#rec' + 163039065);
+                var map = rec.find('.t-map-lazyload');
+                if (map.length != 0) {
+                  var blockTop = map.offset().top;
+                  if ($(window).scrollTop() > blockTop - windowHeight - scrollDiffHeigth) {
+                    if (map.attr('data-maplazy-load') == 'false') {
+                      map.attr('data-maplazy-load', 'true');
+                      t_appendGoogleMap("163039065", "");
                     }
                   }
                 }
-              });
-            </script>
-          </div>
-        </div>
-      </div>
-      <script type="text/javascript">
-        var t554__fireRefreshEventOnWindow = function() {
-          var evt = document.createEvent("HTMLEvents");
-          evt.initEvent('resize', true, false);
-          window.dispatchEvent(evt);
-        };
-        $('.t554').bind('displayChanged', function() {
-          t554__fireRefreshEventOnWindow();
-        });
-      </script>
-    </div>
-    <div id="rec163049158" class="r t-rec t-rec_pt_75 t-rec_pb_75" style="padding-top:75px;padding-bottom:75px; " data-record-type="23">
-      <!-- T006 -->
-      <div class="t006">
-        <div class="t-container">
-          <div class="t-row">
-            <div class="t-col t-col_12 ">
-              <div class="t006__line_top">
-                <div class="t006__uptitle t-uptitle t-uptitle_md" style="" field="title">A quote by Kumara Sangakkara</div>
-              </div>
-            </div>
-          </div>
-          <div class="t-row">
-            <div class="t-col t-col_12 ">
-              <div class="">
-                <div class="t006__text-impact t-text-impact t-text-impact_md" style="" field="text">“Nobody goes undefeated all the time. If you can pick up after a crushing defeat, and go on to win again, you are going to be a champion some day!”
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="t-row">
-            <div class="t-col t-col_12 ">
-              <div class="t006__line_bottom"></div>
-            </div>
-          </div>
+              }
+            });
+          </script>
         </div>
       </div>
     </div>
-    <!-- Girls TEAMS lable comes here -->
-    <div id="rec163049158" class="r t-rec t-rec_pt_75 t-rec_pb_75" style="padding-top:75px;padding-bottom:75px; " data-record-type="23">
-      <!-- T006 -->
-      <div class="t006">
-        <div class="t-container">
-          <div class="t-row">
-            <div class="t-col t-col_12 ">
-              <div class="t006__line_top">
-                <a id="showTable" href="table/index.html" target="_self">
+    <script type="text/javascript">
+      var t554__fireRefreshEventOnWindow = function() {
+        var evt = document.createEvent("HTMLEvents");
+        evt.initEvent('resize', true, false);
+        window.dispatchEvent(evt);
+      };
+      $('.t554').bind('displayChanged', function() {
+        t554__fireRefreshEventOnWindow();
+      });
+    </script>
+  </div>
+  <div id="rec163049158" class="r t-rec t-rec_pt_75 t-rec_pb_75" style="padding-top:75px;padding-bottom:75px; " data-record-type="23">
+    <!-- T006 -->
+    <div class="t006">
+      <div class="t-container">
+        <div class="t-row">
+          <div class="t-col t-col_12 ">
+            <div class="t006__line_top">
+              <div class="t006__uptitle t-uptitle t-uptitle_md" style="" field="title">A quote by Kumara Sangakkara</div>
+            </div>
+          </div>
+        </div>
+        <div class="t-row">
+          <div class="t-col t-col_12 ">
+            <div class="">
+              <div class="t006__text-impact t-text-impact t-text-impact_md" style="" field="text">“Nobody goes undefeated all the time. If you can pick up after a crushing defeat, and go on to win again, you are going to be a champion some day!”
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="t-row">
+          <div class="t-col t-col_12 ">
+            <div class="t006__line_bottom"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Girls TEAMS lable comes here -->
+  <div id="rec163049158" class="r t-rec t-rec_pt_75 t-rec_pb_75" style="padding-top:75px;padding-bottom:75px; " data-record-type="23">
+    <!-- T006 -->
+    <div class="t006">
+      <div class="t-container">
+        <div class="t-row">
+          <div class="t-col t-col_12 ">
+            <div class="t006__line_top">
+              <a id="showTable" href="table/index.html" target="_self">
                 <div id="team_information_button" class="t006__uptitle t-uptitle t-uptitle_md" style="" field="title">CLICK TO VIEW OTHER TEAMS</div>
-                </a>
-              </div>
+              </a>
             </div>
           </div>
-          <!-- For single line use this -->
-          <!-- <div class="t-row">
+        </div>
+        <!-- For single line use this -->
+        <!-- <div class="t-row">
             <div class="t-col t-col_12 ">
               <div class="t006__line_bottom"></div>
             </div>
           </div> -->
-          <!-- For single line use this --end -->
-        </div>
+        <!-- For single line use this --end -->
       </div>
     </div>
+  </div>
 
   </div>
   <!-- <div align_left> -->
-      <!-- <a href="https://www.freecounterstat.com" title="hit counter"><img src="https://counter4.stat.ovh/private/freecounterstat.php?c=k8aa27k1mzg3wan9zgaclz24xeru7twg" border="0" title="hit counter" alt="hit counter" align="center"></a> -->
-      <!-- <a href="https://www.freecounterstat.com" title="web counter"><img src="https://counter2.stat.ovh/private/freecounterstat.php?c=as4hesycccwhhdnf5cyndt6y49pfxxxm" border="0" title="web counter" alt="web counter"></a> -->
-      <a href="https://www.freecounterstat.com" title="web counter"><img src="https://counter2.stat.ovh/private/freecounterstat.php?c=bkwptht5e8pd7zad4z962nc6nzzh6a93" border="0" title="web counter" alt="web counter"></a>
+  <!-- <a href="https://www.freecounterstat.com" title="hit counter"><img src="https://counter4.stat.ovh/private/freecounterstat.php?c=k8aa27k1mzg3wan9zgaclz24xeru7twg" border="0" title="hit counter" alt="hit counter" align="center"></a> -->
+  <!-- <a href="https://www.freecounterstat.com" title="web counter"><img src="https://counter2.stat.ovh/private/freecounterstat.php?c=as4hesycccwhhdnf5cyndt6y49pfxxxm" border="0" title="web counter" alt="web counter"></a> -->
+  <a href="https://www.freecounterstat.com" title="web counter"><img src="https://counter2.stat.ovh/private/freecounterstat.php?c=bkwptht5e8pd7zad4z962nc6nzzh6a93" border="0" title="web counter" alt="web counter"></a>
 
-    <!-- </div>> -->
+  <!-- </div>> -->
   <!--/allrecords-->
   <div id="snackbar">Thank you for registering to ZCL 2020..</div>
 
@@ -691,19 +755,25 @@
   </script>
 
   <script>
-  function showToast() {
-    var x = document.getElementById("snackbar");
-    //x.innerHTML = message;
-    x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
-  }
-  function showToast(message) {
-    var x = document.getElementById("snackbar");
-    x.innerHTML = message;
-    x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
-  }
+    function showToast() {
+      var x = document.getElementById("snackbar");
+      //x.innerHTML = message;
+      x.className = "show";
+      setTimeout(function() {
+        x.className = x.className.replace("show", "");
+      }, 5000);
+    }
+
+    function showToast(message) {
+      var x = document.getElementById("snackbar");
+      x.innerHTML = message;
+      x.className = "show";
+      setTimeout(function() {
+        x.className = x.className.replace("show", "");
+      }, 5000);
+    }
   </script>
 </body>
 <script src="js/bubble_button.js" charset="utf-8"></script>
+
 </html>

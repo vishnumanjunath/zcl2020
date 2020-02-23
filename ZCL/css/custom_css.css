@@ -316,18 +316,25 @@ nav ul li div { position: relative; }
 	border-color: transparent transparent white transparent;
 }
 
+#nav-bar {display: block;}
+#plain-button {display: none;}
+#magic-button {display: block;}
+
+/*
 @media screen and (min-width:761px) {
 
-}
+} */
 
 @media screen and (max-width:760px) {
-
+	#nav-bar {display: none;}
+	#magic-button {display: none;}
+	#plain-button {display: block;}
 }
-
+/*
 @media screen and (max-width:480px) {
 
 }
 
 @media screen and (max-width:360px) {
 
-}
+} */

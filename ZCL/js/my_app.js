@@ -129,6 +129,11 @@ function get_team_list(game_type, team_name) {
   return team_list;
 }
 
+function changeSubmitButtonText(text) {
+  replaceButtonText('submit_button1', text);
+  replaceButtonText('submit_button2', text);
+}
+
 function formSubmit() {
   // Return here while debugging..
   //scrollToBottom();
@@ -137,12 +142,14 @@ function formSubmit() {
   // if (removeRefs()) {
   //   return;
   // }
-  replaceButtonText('submit_button', "Please wait..");
+  //replaceButtonText('submit_button', "Please wait..");
+  changeSubmitButtonText('Please Wait..');
   if (!formSubmit_internal()) {
-    replaceButtonText('submit_button', "Something went wrong, scroll up.." )
+    changeSubmitButtonText("Something went wrong, scroll up.." )
+    showToast("Please fill out all the entries");
     sleep(3500).then(() => {
       // Do something after the sleep!
-      replaceButtonText('submit_button', "Sign up for ZCL 2020" )
+      changeSubmitButtonText("Sign up for ZCL 2020" )
     });
   }
 }
@@ -151,11 +158,11 @@ function formSubmit_internal() {
   //formSubmitted = true;
   if (formSubmitted) {
     if (!formTip) {
-      replaceButtonText('submit_button', 'I promise, I have received your registration data!');
+      changeSubmitButtonText('I promise, I have received your registration data!');
       formTip = true;
       return true;
     } else {
-      replaceButtonText('submit_button', 'You can submit any number of times, but it will be overwritten!');
+      changeSubmitButtonText('You can submit any number of times, but it will be overwritten!');
       sleep(2000).then(() => {
         // Do something after the sleep!
         location.reload();
@@ -218,7 +225,10 @@ function formSubmit_internal() {
 //Send Message to Firebase(4)
 function replaceButtonText(buttonId, text)
 {
-  if (document.getElementById)
+  //$(buttonId).text(text);
+  //console.log("Inside replaceButtonText");
+  //return;
+  if (document.getElementById(buttonId))
   {
     var button=document.getElementById(buttonId);
     if (button)
@@ -238,6 +248,8 @@ function replaceButtonText(buttonId, text)
     }
   }
 }
+
+
 let unique_user_id = null
 function save_unique_user_data(key, email) {
   let unique_list = firebase.database().ref("primaryKeys/").push()
@@ -271,7 +283,7 @@ function sendMessage(name, email, phone, game_type, team_name) {
         alert('Failed to send to data to Firebase servers..');
       } else {
         console.log("Firebase write Passed");
-        replaceButtonText('submit_button', "All the best, practice well and play well!");
+        changeSubmitButtonText("All the best, practice well and play well!");
         showToast('Thank you for registering to ZCL 2020..');
         setTimeout(function () {window.scrollTo(0,document.body.scrollHeight)}, 1500)
 
@@ -288,6 +300,7 @@ function sendMessage(name, email, phone, game_type, team_name) {
 function sayMessage(message) {
   showToast(message)
 }
+
 function scrollToBottom() {
   sayMessage("Showing ZCL 2020 Teams Information")
   $("html, body").animate({ scrollTop: document.body.scrollHeight }, "slow");

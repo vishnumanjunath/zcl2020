@@ -29,7 +29,7 @@
 	 z-index: 2;
 	 color: white;
 	 background: none;
-	 left: 0.8rem;
+	 left: 0.5rem;
 }
  .button--bubble:hover {
 	 background: none;
@@ -95,6 +95,7 @@
 .button--bubble__container {
 	 top: 50%;
 	 margin-top: -25px;
+	 margin-left: .4rem;
 }
  @keyframes hue-rotate {
 	 from {
